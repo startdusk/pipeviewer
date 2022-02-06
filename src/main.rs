@@ -1,8 +1,11 @@
+use std::env;
 use std::io::{self, Read, Write};
 
-const CHUNK_SIZE: usize = 16 * 1024;
+const CHUNK_SIZE: 
+usize = 16 * 1024;
 
 fn main() {
+    let slient = !env::var("PV_SLIENT").unwrap_or_default().is_empty();
     let mut total_bytes = 0;
     loop {
         let mut buffer = [0; CHUNK_SIZE];
@@ -15,5 +18,7 @@ fn main() {
         io::stdout().write_all(&buffer[..num_read]).unwrap();
     }
 
-    eprintln!("{}", total_bytes);
+    if !slient {
+        eprintln!("{}", total_bytes);
+    }
 }
