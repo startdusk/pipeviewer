@@ -16,8 +16,8 @@ fn main() -> Result<()> {
         )
         .arg(Arg::new("slient").short('s').long("slient"))
         .get_matches();
-    let infile = matches.value_of("infile").unwrap_or_default();
-    let outfile = matches.value_of("outfile").unwrap_or_default();
+    // let infile = matches.value_of("infile").unwrap_or_default();
+    // let outfile = matches.value_of("outfile").unwrap_or_default();
 
     let slient = if matches.is_present("slient") {
         true
