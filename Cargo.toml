@@ -2,6 +2,7 @@
 name = "pipeviewer"
 version = "1.0.0"
 edition = "2021"
+authors = ["Benjamin Shelby <clylia217@gmail.com>"]
 description = "A tool to show the progress of a program"
 homepage = "https://github.com/startdusk/pipeviewer"
 repository = "https://github.com/startdusk/pipeviewer"
